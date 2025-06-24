@@ -1,0 +1,49 @@
+headingLevels:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+name: 'Rich text'
+options:
+  alignment:
+    options:
+      - left
+      - center
+      - right
+  fontColor:
+    colorPicker: false
+    colors:
+      -
+        color: ''
+        label: ''
+  link:
+    decorators:
+      openInNewTab:
+        attributes:
+          rel: 'noopener noreferrer'
+          target: _blank
+        label: 'Open in new tab'
+        mode: manual
+  list:
+    properties:
+      reversed: false
+      startIndex: false
+      styles: false
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - underline
+  - strikethrough
+  - link
+  - fontColor
+  - '|'
+  - bulletedList
+  - numberedList
+  - blockQuote
+  - code
+  - insertTable
+  - '|'
+  - sourceEditing

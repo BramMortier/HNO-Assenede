@@ -1,0 +1,23 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{% set href = href|default("") %}
+{% set label = label|default("") %}
+{% set target = target|default("_self") %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% if label %}
+    <a 
+        class="c-link {{ class }}"
+        href="{{ href }}"
+        target="{{ target }}"
+        {{ attr(attributes) }}
+    >
+            {{- label -}}
+    </a>
+{% endif %}

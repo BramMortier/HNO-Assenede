@@ -1,0 +1,16 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{% set text = text|default("") %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% if text %}
+    <div class="c-rich-text wysiwyg {{ class }}" {{ attr(attributes) }}>
+        {{ text|raw }}
+    </div>
+{% endif %}

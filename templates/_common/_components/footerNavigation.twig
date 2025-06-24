@@ -1,0 +1,46 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set navigation = navigation|default([]) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% if navigation %}
+    <nav class="c-footer-navigation">
+        <ul class="c-footer-navigation-links">
+            {% for link in navigation %}
+                {% set label = link.labelField|default("") %}
+                {% set href = link.urlField|default("") %}
+                {% set target = link.targetConfig|default("") %}
+                {% set subLinks = link.subLinksField|default([]) %}
+
+                <li class="c-footer-navigation-link">
+                    {% include "_components/link" with {
+                        label,
+                        href,
+                        target,
+                    } only %}
+
+                    {% if subLinks|length %}
+                        <ul class="c-footer-navigation-link-sub-navigation">
+                            {% for link in subLinks %}
+                                {% set label = link.labelField|default("") %}
+                                {% set href = link.urlField|default("") %}
+                                {% set target = link.targetConfig|default("") %}
+
+                                <li class="c-footer-navigation-link-sub-navigation-link">
+                                    {% include "_components/link" with {
+                                        label,
+                                        href,
+                                        target,
+                                    } only %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+{% endif %}

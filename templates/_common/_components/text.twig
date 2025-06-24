@@ -1,0 +1,16 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{% set text = text|default("") %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% if text %}
+    <p class="c-text {{ class }}" {{ attr(attributes) }}>
+        {{ text|raw }}
+    </p>
+{% endif %}

@@ -1,0 +1,48 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+{% set buttonClass = buttonClass|default("") %}
+{% set buttonAttributes = buttonAttributes|default({}) %}
+
+{% set buttons = buttons|default([]) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% if buttons|length > 1 %}
+    <ul class="c-buttons {{ class }}">
+        {% for button in buttons %}
+            {% set label = button.labelField|default("") %}
+            {% set href = button.urlField|default("") %}
+            {% set target = button.targetConfig|default("") %}
+            {% set variant = button.buttonVariantConfig|default("") %}
+
+            <li class="c-buttons-item">
+                {% include "_components/button" with {
+                    class: buttonClass,
+                    attributes: buttonAttributes,
+                    label,
+                    href,
+                    target,
+                    variant,
+                } only %}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    {% set label = buttons[0].labelField|default("") %}
+    {% set href = buttons[0].urlField|default("") %}
+    {% set target = buttons[0].targetConfig|default("") %}
+    {% set variant = buttons[0].buttonVariantConfig|default("") %}
+
+    {% include "_components/button" with {
+        class: buttonClass,
+        attributes: buttonAttributes,
+        label,
+        href,
+        target,
+        variant,
+    } only %}
+{% endif %}

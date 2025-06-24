@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: nl
+name: nl
+primary: true
+siteGroup: 8ec97a19-2e28-4350-b8a9-78fc2b8a06e2 # HNO Assenede
+sortOrder: 1

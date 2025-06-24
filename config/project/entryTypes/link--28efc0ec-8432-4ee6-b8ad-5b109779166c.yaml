@@ -1,0 +1,75 @@
+color: teal
+fieldLayouts:
+  dc21ca45-42ec-4391-89d5-94412375ad8e:
+    cardView:
+      - 'layoutElement:4fb1eda8-5465-4a7b-98e6-5b49864eb261'
+      - 'layoutElement:a3bd6039-d017-40d2-9bab-04c8f6ac8ae6'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-20T15:39:14+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: a3045613-418c-483e-a666-fb4269b18c80 # URL
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a3bd6039-d017-40d2-9bab-04c8f6ac8ae6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-20T15:39:14+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 4381ddb2-8940-4d25-8e42-5a770b533b71 # Tekst
+            handle: labelField
+            includeInCards: true
+            instructions: null
+            label: Label
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4fb1eda8-5465-4a7b-98e6-5b49864eb261
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-20T15:39:14+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 9711e272-d70a-4399-adde-7368c097f72c # Doel
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c867ed4f-178c-4a4f-a835-f9ed45853d25
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: eeab1e9b-c818-450f-b80a-ca21270a363a
+        userCondition: null
+handle: link
+hasTitleField: false
+icon: link
+name: Link
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

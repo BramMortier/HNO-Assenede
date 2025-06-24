@@ -1,0 +1,29 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{% set href = href|default("") %}
+{% set label = label|default("") %}
+{% set type = type|default("button") %}
+{% set variant = variant|default("primary") %}
+{% set target = target|default("_self") %}
+{% set tag = tag|default(href ? "a" : "button") %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% if label %}
+    <{{tag}} 
+        class="c-button {{ class }} {{ variant }}"
+        type="{{ type }}"
+        {{ attr(attributes) }}
+        {% if href %}
+            href="{{ href }}"
+            target="{{ target }}"
+        {% endif %}
+    >
+        {{- label -}}
+    </{{tag}}>
+{% endif %}

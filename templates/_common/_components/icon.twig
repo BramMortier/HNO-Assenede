@@ -1,0 +1,17 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default("") %}
+{% set icon = icon|default("") %}
+
+{% set svgAttributes = {
+    class: "c-icon" ~ class,
+} %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% if icon %}
+    {{ svg("@webroot/icons/#{icon}.svg")|attr(svgAttributes) }}
+{% endif %}

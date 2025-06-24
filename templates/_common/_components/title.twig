@@ -1,0 +1,17 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{% set title = title|default("") %}
+{% set tag = tag|default("h2") %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% if title %}
+    <{{ tag }} class="c-title {{ class }}" attr(attributes)>
+        {{ title|striptags("<strong><b><br>")|raw }}
+    </{{ tag }}>
+{% endif %}

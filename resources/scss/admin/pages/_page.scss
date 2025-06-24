@@ -1,0 +1,8 @@
+@use "../../common/base/breakpoints" as *;
+
+.page {
+	&-main {
+		display: flex;
+		flex-direction: column;
+	}
+}

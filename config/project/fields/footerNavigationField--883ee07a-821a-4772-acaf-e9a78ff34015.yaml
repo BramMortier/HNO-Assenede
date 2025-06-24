@@ -1,0 +1,26 @@
+columnSuffix: null
+handle: footerNavigationField
+instructions: null
+name: 'Footer navigatie'
+searchable: true
+settings:
+  createButtonLabel: 'New link'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 72688bf2-9dcf-4032-9899-7d39ab1986f0
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: true
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

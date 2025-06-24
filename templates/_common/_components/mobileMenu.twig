@@ -1,0 +1,15 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{% set buttons = header.buttonsField|default([]) %}
+{% set primaryNavigation = header.primaryNavigationField|default([]) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<div class="c-mobile-menu {{ class }}" {{ attr(attributes) }}>
+
+</div>

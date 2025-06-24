@@ -1,0 +1,42 @@
+@use "./breakpoints" as *;
+
+// =======================
+// HEADING TYPO'S
+// =======================
+.typo-h1 {
+	font-family: var(--font-primary);
+}
+
+.typo-h2 {
+	font-family: var(--font-primary);
+}
+
+.typo-h3 {
+	font-family: var(--font-primary);
+}
+
+.typo-h4 {
+	font-family: var(--font-primary);
+}
+
+// =======================
+// BODY TYPO'S
+// =======================
+.typo-body-lg {
+	font-family: var(--font-primary);
+}
+
+.typo-body-md {
+	font-family: var(--font-primary);
+}
+
+.typo-body-sm {
+	font-family: var(--font-primary);
+}
+
+// =======================
+// EXTRA TYPO'S
+// =======================
+.typo-button {
+	font-family: var(--font-primary);
+}

@@ -1,0 +1,23 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<!DOCTYPE html>
+<html lang="{{ craft.app.language }}">
+
+{% include "_app/base/head" %}
+
+<body x-data="site" class="app-page {{ class }}" {{ attr(attributes) }}>
+    <main class="app-page-main">
+        {% block content %}{% endblock %}
+    </main>
+
+    {{ craft.vite.script("resources/js/common.js", false) }}
+    {{ craft.vite.script("resources/js/app.js", false) }}
+</body>
+</html>

@@ -1,0 +1,30 @@
+@use "./breakpoints" as *;
+
+// =======================
+// CONTAINER
+// =======================
+.container {
+	--container-width: minmax(0, var(--container-default-width));
+	--container-bound-left: var(--container-default-bound-left);
+	--container-bound-right: var(--container-default-bound-right);
+
+	display: grid;
+	grid-template-columns:
+		1fr
+		var(--container-bound-left)
+		var(--container-width)
+		var(--container-bound-right)
+		1fr;
+
+	& > div {
+		grid-column: 3 / 4;
+	}
+
+	&-no-right-bound > div {
+		grid-column: 3 / 6;
+	}
+
+	&-no-left-bound > div {
+		grid-column: 1 / 4;
+	}
+}

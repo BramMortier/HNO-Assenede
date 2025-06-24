@@ -1,0 +1,23 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<!DOCTYPE html>
+<html lang="{{ craft.app.language }}">
+
+{% include "_admin/base/head" %}
+
+<body x-data="site" class="admin-page {{ class }}" {{ attr(attributes) }}>
+    <main class="admin-page-main">
+        {% block content %}{% endblock %}
+    </main>
+
+    {{ craft.vite.script("resources/js/common.js", false) }}
+    {{ craft.vite.script("resources/js/admin.js", false) }}
+</body>
+</html>

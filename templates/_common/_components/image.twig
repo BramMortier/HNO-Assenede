@@ -1,0 +1,50 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+{% set image = image|default({}) %}
+{% set crop = crop|default({}) %}
+{% set cropMobile = cropMobile|default({}) %}
+
+{% set cropDefault = {
+    mode: "fit",
+    width: 1024,
+    height: 1024,
+    quality: 80,
+    position: "center-center",
+    format: "jpg",
+} %}
+
+{% set aboveTheFold = aboveTheFold is defined ? aboveTheFold : 0 %}
+
+{% set cropModern = cropDefault|merge(crop)|merge({ format: 'webp' }) %}
+{% set cropLegacy = cropDefault|merge(crop) %}
+
+{% set cropMobileModern = cropDefault|merge(cropMobile)|merge({ format: 'webp' }) %}
+{% set cropMobileLegacy = cropDefault|merge(cropMobile) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% if image %}
+    {% if image.mimeType == "image/svg+xml" %}
+        {{ svg(image)|attr({ class: 'c-image ' ~ class }) }}
+    {% else %}
+        <picture class="c-image {{ class }}" itemprop="image" aria-label="{{ image.title }}">
+            <source srcset="{{ image.getUrl(cropModern) }}" type="image/webp" media="(min-width: 1024px)">
+            <source srcset="{{ image.getUrl(cropLegacy) }}" media="(min-width: 1024px)">
+            <source srcset="{{ image.getUrl(cropMobileModern) }}" type="image/webp">
+
+            <img 
+                src="{{ image.getUrl(cropMobileLegacy) }}" 
+                width="{{image.width }}" 
+                height="{{ image.height }}" 
+                alt="{{ image.alt ? image.alt : image.title }}" 
+                {% if not aboveTheFold %}
+                    loading="lazy"
+                {% endif %}
+            >
+        </picture>
+    {% endif %}
+{% endif %}

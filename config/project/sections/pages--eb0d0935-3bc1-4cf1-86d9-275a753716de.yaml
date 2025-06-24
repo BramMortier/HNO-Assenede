@@ -1,0 +1,31 @@
+defaultPlacement: beginning
+enableVersioning: true
+entryTypes:
+  -
+    uid: d7e8d0bc-8052-499d-99b8-d622687dfee7 # Page
+handle: pages
+maxAuthors: 1
+name: "Extra Pagina's"
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  e1acd264-0533-4dd7-8cfa-183423e1c25e: # nl
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/entry.twig
+    uriFormat: '{slug}'
+structure:
+  maxLevels: 3
+  uid: 7ddf6c3b-101c-4f71-8d66-e6b989227b38
+type: structure

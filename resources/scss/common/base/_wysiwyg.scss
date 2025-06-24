@@ -1,0 +1,144 @@
+// =======================
+// RICH TEXT STYLES
+// =======================
+.wysiwyg {
+	font-family: sans-serif;
+
+	& > :first-child {
+		margin-top: 0;
+	}
+
+	& > :last-child {
+		margin-bottom: 0;
+	}
+
+	h2 {
+		font-size: var(--fs-48);
+		margin-block: var(--space-32) var(--space-24);
+		line-height: 1.2;
+	}
+
+	h3 {
+		font-size: var(--fs-32);
+		margin-block: var(--space-24) var(--space-20);
+		line-height: 1.2;
+	}
+
+	h4 {
+		font-size: var(--fs-24);
+		margin-block: var(--space-20) var(--space-16);
+		line-height: 1.2;
+	}
+
+	h5 {
+		font-size: var(--fs-20);
+		margin-block: var(--space-16) var(--space-12);
+		line-height: 1.2;
+	}
+
+	h6 {
+		font-size: var(--fs-16);
+		margin-block: var(--space-16) var(--space-12);
+		line-height: 1.2;
+	}
+
+	p {
+		font-size: var(--fs-16);
+		margin-block: var(--space-12);
+		line-height: 1.6;
+
+		strong {
+		}
+
+		i {
+		}
+
+		u {
+		}
+
+		s {
+		}
+	}
+
+	ul,
+	ol {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-8);
+
+		margin-block: var(--space-16) var(--space-24);
+		padding-left: var(--space-16);
+	}
+
+	ul {
+		li {
+			position: relative;
+
+			&::after {
+				position: absolute;
+				content: "";
+				left: -16px;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: black;
+				width: 6px;
+				height: 6px;
+			}
+		}
+	}
+
+	ol {
+		counter-reset: list-item-index;
+
+		li {
+			position: relative;
+			counter-increment: list-item-index;
+
+			&::after {
+				position: absolute;
+				content: counter(list-item-index);
+				left: -16px;
+				top: 50%;
+				font-weight: var(--fw-700);
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	table {
+		margin-top: var(--space-12);
+		border-collapse: collapse;
+		width: 100%;
+
+		& > thead {
+			& > tr {
+				& > th {
+					text-align: left;
+					font-weight: var(--fw-700);
+					border: 1px solid var(--clr-grey-100);
+					padding: var(--space-16);
+				}
+			}
+		}
+
+		& > tbody {
+			& > tr {
+				& > td {
+					border: 1px solid var(--clr-grey-100);
+					padding: var(--space-16);
+				}
+			}
+		}
+	}
+
+	blockquote {
+		margin-block: var(--space-12);
+		border: 1px solid var(--clr-grey-100);
+		padding: var(--space-16) var(--space-20);
+		width: fit-content;
+
+		p {
+			margin: 0;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+columnSuffix: null
+handle: linksField
+instructions: null
+name: Linken
+searchable: true
+settings:
+  createButtonLabel: 'New link'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 28efc0ec-8432-4ee6-b8ad-5b109779166c # Link
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: true
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

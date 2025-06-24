@@ -1,0 +1,54 @@
+columnSuffix: null
+handle: urlField
+instructions: null
+name: URL
+searchable: true
+settings:
+  maxLength: 255
+  showLabelField: false
+  showTargetField: false
+  typeSettings:
+    __assoc__:
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - ''
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowedKinds
+              -
+                - image
+                - pdf
+            -
+              - showUnpermittedVolumes
+              - ''
+            -
+              - showUnpermittedFiles
+              - ''
+  types:
+    - entry
+    - url
+    - asset
+    - email
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

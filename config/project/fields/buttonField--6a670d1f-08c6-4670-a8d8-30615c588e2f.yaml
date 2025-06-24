@@ -1,0 +1,26 @@
+columnSuffix: null
+handle: buttonField
+instructions: null
+name: Knop
+searchable: true
+settings:
+  createButtonLabel: 'New button'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - aa95f819-8179-4afd-8972-f3d4b77f3056 # Knop
+  includeTableView: false
+  maxEntries: 1
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: true
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

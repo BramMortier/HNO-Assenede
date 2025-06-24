@@ -1,0 +1,44 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+{% set linkClass = linkClass|default("") %}
+{% set linkAttributes = linkAttributes|default({}) %}
+
+{% set links = links|default([]) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% if links|length > 1 %}
+    <ul class="c-links {{ class }}">
+        {% for link in links %}
+            {% set label = link.labelField|default("") %}
+            {% set href = link.urlField|default("") %}
+            {% set target = link.targetConfig|default("") %}
+
+            <li class="c-links-item">
+                {% include "_components/link" with {
+                    class: linkClass,
+                    attributes: linkAttributes,
+                    label,
+                    href,
+                    target,
+                } only %}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    {% set label = links[0].labelField|default("") %}
+    {% set href = links[0].urlField|default("") %}
+    {% set target = links[0].targetConfig|default("") %}
+
+    {% include "_components/link" with {
+        class: linkClass,
+        attributes: linkAttributes,
+        label,
+        href,
+        target,
+    } only %}
+{% endif %}

@@ -1,0 +1,31 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 61469d6d-683d-43fa-a8e6-3c2cb67cab85 # Drankje
+handle: drinks
+maxAuthors: 1
+name: Drankjes
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  e1acd264-0533-4dd7-8cfa-183423e1c25e: # nl
+    enabledByDefault: true
+    hasUrls: true
+    template: drinks/_entry.twig
+    uriFormat: 'drinks/{slug}'
+structure:
+  maxLevels: null
+  uid: f8b19e95-66d3-44d9-ba3b-f96e3a109e57
+type: structure
