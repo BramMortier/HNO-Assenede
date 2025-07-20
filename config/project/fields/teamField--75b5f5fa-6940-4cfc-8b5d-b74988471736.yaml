@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: teamField
+instructions: null
+name: Ploeg
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  selectionLabel: 'Kies een ploeg'
+  showCardsInGrid: false
+  showSiteMenu: true
+  showUnpermittedEntries: false
+  showUnpermittedSections: false
+  sources:
+    - 'section:f56554ce-0761-4494-b718-a62a70acc833' # Ploegen
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

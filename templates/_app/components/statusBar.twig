@@ -1,0 +1,14 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<header class="c-status-bar container {{ class }}" {{ attr(attributes) }}>
+    <div class="c-status-bar-content">
+        <p class="typo-body-md">{{ currentUser.fullName }}</p>    
+    </div>
+</header>

@@ -1,0 +1,40 @@
+columnSuffix: null
+handle: statusField
+instructions: null
+name: Status
+searchable: true
+settings:
+  customOptions: false
+  iconsOnly: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Niet betaald'
+        -
+          - value
+          - unpaid
+        -
+          - icon
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Betaald
+        -
+          - value
+          - payed
+        -
+          - icon
+          - ''
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\ButtonGroup

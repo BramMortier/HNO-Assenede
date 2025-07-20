@@ -1,4 +1,4 @@
-dateModified: 1750619525
+dateModified: 1753037028
 elementSources:
   craft\elements\Asset:
     -
@@ -37,54 +37,8 @@ elementSources:
         - link
       type: native
     -
-      defaultSort:
-        - title
-        - asc
-      defaultViewMode: ''
-      disabled: true
-      key: singles
-      tableAttributes:
-        - status
-        - link
-      type: native
-    -
       heading: Pages
       type: heading
-    -
-      condition:
-        class: craft\elements\conditions\entries\EntryCondition
-        conditionRules:
-          -
-            class: craft\elements\conditions\entries\SectionConditionRule
-            operator: in
-            uid: 2d9c68f9-41eb-4405-b070-1542e1b3bfd5
-            values:
-              - 5b185af0-6204-4ae7-8d25-bf9ef8208ad0
-        elementType: craft\elements\Entry
-        fieldContext: global
-      defaultSort:
-        - title
-        - asc
-      defaultViewMode: table
-      key: 'custom:04fa9561-5f43-4a9c-bc6e-68cce3b05fd2'
-      label: 'Default pages'
-      tableAttributes:
-        - uri
-        - dateUpdated
-        - status
-      type: custom
-    -
-      defaultSort:
-        - structure
-        - asc
-      defaultViewMode: ''
-      disabled: false
-      key: 'section:eb0d0935-3bc1-4cf1-86d9-275a753716de' # Extra Pagina's
-      tableAttributes:
-        - uri
-        - dateUpdated
-        - status
-      type: native
     -
       heading: General
       type: heading
@@ -100,6 +54,154 @@ elementSources:
         - revisionCreator
         - postDate
         - status
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:f56554ce-0761-4494-b718-a62a70acc833' # Ploegen
+      tableAttributes:
+        - id
+        - status
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:e984eadc-1f94-4f3b-a83b-097856e7d384' # Wedstrijden
+      tableAttributes:
+        - uri
+        - 'fieldInstance:1d8fae3a-1965-4c6e-9eb5-774f8d02b8c4'
+        - 'fieldInstance:ff836b08-6a40-462f-9460-ee35e600bf9e'
+        - 'field:aba26c22-a364-49c5-a2cd-3d54d3140902' # Aanwezige spelers
+        - status
+        - 'field:f9798596-5043-488d-a45b-962204e21626' # Datum
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:8c4dc680-d05f-48f3-9cbb-4405d8ab7b0f' # Tab items
+      tableAttributes:
+        - 'fieldInstance:fd728a83-a05a-4999-8949-116d76602522'
+        - 'field:14e06189-33c8-4311-aac0-82f57292749e' # Drankje
+        - dateUpdated
+        - 'field:1d89aa36-b5d1-4e72-b31d-51f5c31270d7' # Status
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:e386430b-c124-4cde-a204-b83d4a4e50e3' # Tabs
+      tableAttributes:
+        - 'field:e9bc68fa-b02e-43ce-8622-1b9c65f99cd2' # Gebruiker
+        - 'field:48a27479-c9bf-412a-87d0-325eaa00982b' # Tab items
+        - dateUpdated
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:7f8dd760-0543-4d68-945d-76bf6e956d6f' # Beschikbaarheden
+      tableAttributes:
+        - 'field:1444bf84-89e3-452c-8f5a-1492ee3c8388' # Wedstrijd
+      type: native
+  craft\elements\User:
+    -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: true
+      key: '*'
+      tableAttributes:
+        - status
+        - fullName
+        - email
+        - dateCreated
+        - lastLoginDate
+      type: native
+    -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: admins
+      tableAttributes:
+        - status
+        - fullName
+        - email
+        - dateCreated
+        - lastLoginDate
+      type: native
+    -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: true
+      key: credentialed
+      tableAttributes:
+        - status
+        - fullName
+        - email
+        - dateCreated
+        - lastLoginDate
+      type: native
+    -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: true
+      key: inactive
+      tableAttributes:
+        - status
+        - fullName
+        - email
+        - dateCreated
+        - lastLoginDate
+      type: native
+    -
+      heading: Groepen
+      type: heading
+    -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'group:1b93750d-92a9-4239-9f18-ca76b180e0a6' # Spelers
+      tableAttributes:
+        - 'fieldInstance:904dedd9-5661-4c7d-8a38-575ebab0e251'
+        - fullName
+        - 'field:6472ea84-e89e-4546-89fb-15865f4a2f73' # Ploegen
+        - status
+      type: native
+    -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'group:71bd40e1-5dbe-4b48-95f7-b16d5527e273' # Moderators
+      tableAttributes:
+        - status
+        - fullName
+        - email
+        - dateCreated
+        - lastLoginDate
       type: native
 email:
   fromEmail: dev@manu.be
@@ -127,36 +229,58 @@ fs:
 meta:
   __names__:
     00e1d9bb-51b9-4ebf-847e-a089feaef726: 'Public Schema' # Public Schema
+    1b93750d-92a9-4239-9f18-ca76b180e0a6: Spelers # Spelers
+    1d89aa36-b5d1-4e72-b31d-51f5c31270d7: Status # Status
     2ab57b6f-1852-449c-9afa-30c833317b58: Linken # Linken
     2b9c20b9-9252-416a-b5a0-041473c84c8a: Icoon # Icoon
     4b9c49b3-1c60-4cf8-90ea-24baf113c4ee: SEO # SEO
+    4ddf0062-dca7-48bd-bee8-d38358194f4d: Nummer # Nummer
     6a670d1f-08c6-4670-a8d8-30615c588e2f: Knop # Knop
+    7f8dd760-0543-4d68-945d-76bf6e956d6f: Beschikbaarheden # Beschikbaarheden
+    8c4dc680-d05f-48f3-9cbb-4405d8ab7b0f: 'Tab items' # Tab items
     8ec97a19-2e28-4350-b8a9-78fc2b8a06e2: 'HNO Assenede' # HNO Assenede
     8eceae5c-bf72-475b-a84f-33735f3d3f1d: Title # Title
     9a80c602-8f9a-47fa-9f77-bec83a7c2418: Foto # Foto
+    14e06189-33c8-4311-aac0-82f57292749e: Drankje # Drankje
     28efc0ec-8432-4ee6-b8ad-5b109779166c: Link # Link
     39dae8e0-9ae7-4d95-9088-aa5a0af11cbe: Images # Images
+    48a27479-c9bf-412a-87d0-325eaa00982b: 'Tab items' # Tab items
+    71bd40e1-5dbe-4b48-95f7-b16d5527e273: Moderators # Moderators
+    75b5f5fa-6940-4cfc-8b5d-b74988471736: Ploeg # Ploeg
     78f386d8-ccbe-4fa9-b24b-f527005175e6: Uploads # Uploads
+    91ee2521-e4d6-4250-b325-0dd7ec3ebd18: Beschikbaarheid # Beschikbaarheid
     96e0badb-3ddd-4fab-8fdf-99eb1091225b: Price # Price
     841b576a-8964-4701-ac7a-8789c2ee20d1: 'Primaire navigatie' # Primaire navigatie
     857c718e-b5a7-402c-8bcd-e92b86306176: 'Rich text' # Rich text
     883ee07a-821a-4772-acaf-e9a78ff34015: 'Footer navigatie' # Footer navigatie
+    0992bdcd-a7d5-414f-86b0-9b0890c618c9: Tab # Tab
+    1444bf84-89e3-452c-8f5a-1492ee3c8388: Wedstrijd # Wedstrijd
     4381ddb2-8940-4d25-8e42-5a770b533b71: Tekst # Tekst
     4873bc46-6c2c-4e5a-8e84-cb8e312f20ad: Buttons # Buttons
     05248eae-0d0d-4c9b-9c0f-da2e1ec1213a: Link # Link
+    6472ea84-e89e-4546-89fb-15865f4a2f73: Ploegen # Ploegen
     7947a42a-167a-4d11-a4c2-dcf9fa46eb65: 'Knop variant' # Knop variant
     9711e272-d70a-4399-adde-7368c097f72c: Doel # Doel
     24822cfe-6970-4a10-a176-a5078e260577: Drankjes # Drankjes
     61469d6d-683d-43fa-a8e6-3c2cb67cab85: Drankje # Drankje
+    82998132-6d0e-46f2-b2c5-44d619da765c: Wedstrijd # Wedstrijd
+    90058012-6139-471d-bd26-a3d8c56b1afc: Ploeg # Ploeg
     a0e451ef-63a0-4743-b8ed-d7b329262efe: 'User profile images' # User profile images
     a3045613-418c-483e-a666-fb4269b18c80: URL # URL
     aa95f819-8179-4afd-8972-f3d4b77f3056: Knop # Knop
+    aba26c22-a364-49c5-a2cd-3d54d3140902: 'Aanwezige spelers' # Aanwezige spelers
+    c608c81f-628e-4a6a-8be6-085132bfd8f8: Beschikbaarheid # Beschikbaarheid
     d0499f4d-e39e-4fab-80c5-595fadbfcf91: 'Meerdere lijnen tekst' # Meerdere lijnen tekst
     d1ab0c28-7124-4171-99dd-27b8f9805017: 'Opgemaakte Tekst' # Opgemaakte Tekst
     d7e8d0bc-8052-499d-99b8-d622687dfee7: Page # Page
+    d5838780-a2c9-4084-8a55-7786b5b10baa: 'Tab item' # Tab item
     e1acd264-0533-4dd7-8cfa-183423e1c25e: nl # nl
     e7f650f0-adf2-4ec9-95af-8db8542b1931: Titel # Titel
-    eb0d0935-3bc1-4cf1-86d9-275a753716de: "Extra Pagina's" # Extra Pagina's
+    e9bc68fa-b02e-43ce-8622-1b9c65f99cd2: Gebruiker # Gebruiker
+    e984eadc-1f94-4f3b-a83b-097856e7d384: Wedstrijden # Wedstrijden
+    e386430b-c124-4cde-a204-b83d4a4e50e3: Tabs # Tabs
+    f56554ce-0761-4494-b718-a62a70acc833: Ploegen # Ploegen
+    f9798596-5043-488d-a45b-962204e21626: Datum # Datum
 plugins:
   ckeditor:
     edition: standard
@@ -166,6 +290,15 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.1.1
+  mollie-payments:
+    edition: standard
+    enabled: true
+    licenseKey: YFE5PD3L4V4CEPK6I1SPJLYW
+    schemaVersion: 5.0.0
   seo:
     edition: standard
     enabled: true

@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: competitionField
+instructions: null
+name: Wedstrijd
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: 'Kies een wedstrijd'
+  showCardsInGrid: false
+  showSiteMenu: true
+  showUnpermittedEntries: false
+  showUnpermittedSections: false
+  sources:
+    - 'section:e984eadc-1f94-4f3b-a83b-097856e7d384' # Wedstrijden
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

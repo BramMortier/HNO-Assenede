@@ -1,8 +1,8 @@
-allowPublicRegistration: false
+allowPublicRegistration: true
 deactivateByDefault: false
-defaultGroup: ''
+defaultGroup: 1b93750d-92a9-4239-9f18-ca76b180e0a6 # Spelers
 photoSubpath: '{username}'
 photoVolumeUid: a0e451ef-63a0-4743-b8ed-d7b329262efe # User profile images
 require2fa: false
 requireEmailVerification: true
-validateOnPublicRegistration: false
+validateOnPublicRegistration: true

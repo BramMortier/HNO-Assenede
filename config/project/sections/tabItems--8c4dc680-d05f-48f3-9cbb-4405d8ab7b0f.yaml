@@ -1,0 +1,31 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: d5838780-a2c9-4084-8a55-7786b5b10baa # Tab item
+handle: tabItems
+maxAuthors: 1
+name: 'Tab items'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  e1acd264-0533-4dd7-8cfa-183423e1c25e: # nl
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 646d0c4e-f4e9-4657-8638-8f7cbc9d17a0
+type: structure

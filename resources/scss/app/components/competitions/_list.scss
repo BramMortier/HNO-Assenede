@@ -1,0 +1,7 @@
+@use "../../../common/base/breakpoints" as *;
+
+.c-competitions-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-24);
+}

@@ -1,0 +1,68 @@
+@use "../../../common/base/breakpoints" as *;
+
+.c-competition-card {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-16);
+	padding-bottom: var(--space-24);
+	border-bottom: 1px solid var(--clr-grey-100);
+
+	&-matchup {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		border: 1px solid var(--clr-grey-100);
+		border-radius: var(--border-radius-5);
+	}
+
+	&-team {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-6);
+		padding: var(--space-12) var(--space-24);
+
+		& > .typo-body-md {
+			color: var(--clr-orange-500);
+		}
+
+		&:first-child {
+			border-right: 1px solid var(--clr-grey-100);
+		}
+	}
+
+	&-availability {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-12);
+
+		&-top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: var(--space-12);
+		}
+
+		&-deadline {
+			display: flex;
+			align-items: center;
+			gap: var(--space-8);
+			color: var(--clr-error);
+		}
+
+		&-main {
+			display: flex;
+			flex-wrap: wrap;
+			gap: var(--space-8);
+
+			& > button {
+				height: 40px;
+				border: 1px solid var(--clr-grey-100);
+				border-radius: var(--border-radius-5);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding-inline: var(--space-24);
+				cursor: pointer;
+			}
+		}
+	}
+}

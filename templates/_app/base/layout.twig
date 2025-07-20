@@ -13,6 +13,8 @@
 {% include "_app/base/head" %}
 
 <body x-data="site" class="app-page {{ class }}" {{ attr(attributes) }}>
+    {% include "_app/components/statusBar" %}
+
     <main class="app-page-main">
         {% block content %}{% endblock %}
     </main>

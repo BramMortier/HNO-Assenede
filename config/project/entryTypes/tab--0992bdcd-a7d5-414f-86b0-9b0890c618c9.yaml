@@ -1,0 +1,85 @@
+color: orange
+fieldLayouts:
+  34f46d8c-bdda-435b-9cf8-fa334bfb1e1f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-06-24T21:32:21+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 44f7d2b6-a4cd-4c1e-b343-5390bdbc2102
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-06-24T21:25:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e9bc68fa-b02e-43ce-8622-1b9c65f99cd2 # Gebruiker
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 42d16c1d-851c-4485-9e69-2d1aa5916790
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-06-24T21:30:05+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 48a27479-c9bf-412a-87d0-325eaa00982b # Tab items
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 60dcf8c3-b35f-4f05-82c4-6cdef3e91062
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 79258d47-5f10-4020-8b2c-db39a335da99
+        userCondition: null
+handle: tab
+hasTitleField: true
+icon: tablet
+name: Tab
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

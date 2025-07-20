@@ -1,3 +1,14 @@
 export function loginForm() {
-	return {};
+	return {
+		async login() {
+			const response = fetch(`/actions/users/login`, {
+				method: "POST",
+				body: formData,
+				headers: {
+					Accept: "application/json",
+					"X-CSRF-Token": session.csrfTokenValue,
+				},
+			});
+		},
+	};
 }

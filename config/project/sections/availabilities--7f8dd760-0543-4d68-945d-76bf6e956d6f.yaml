@@ -1,0 +1,31 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 91ee2521-e4d6-4250-b325-0dd7ec3ebd18 # Beschikbaarheid
+handle: availabilities
+maxAuthors: 1
+name: Beschikbaarheden
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  e1acd264-0533-4dd7-8cfa-183423e1c25e: # nl
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 09ef021b-7401-4bd3-9b4d-05e54f5b9103
+type: structure

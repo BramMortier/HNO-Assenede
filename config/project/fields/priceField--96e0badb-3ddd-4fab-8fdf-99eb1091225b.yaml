@@ -2,7 +2,7 @@ columnSuffix: null
 handle: priceField
 instructions: null
 name: Price
-searchable: false
+searchable: true
 settings:
   currency: EUR
   defaultValue: 0

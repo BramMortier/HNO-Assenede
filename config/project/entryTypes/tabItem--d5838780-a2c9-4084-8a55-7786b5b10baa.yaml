@@ -1,0 +1,102 @@
+color: orange
+fieldLayouts:
+  d046ca15-fc79-4273-a9ba-81bb98ce2c96:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-06-24T21:31:03+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 1543ff56-997b-4f30-ae3d-9b4e30867a80
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-06-24T21:29:04+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 14e06189-33c8-4311-aac0-82f57292749e # Drankje
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e04c0742-ea82-4c07-ad0a-31767f984160
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-06-24T21:29:04+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 4ddf0062-dca7-48bd-bee8-d38358194f4d # Nummer
+            handle: amountField
+            includeInCards: false
+            instructions: null
+            label: Aantal
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd728a83-a05a-4999-8949-116d76602522
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-06-24T21:29:04+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 1d89aa36-b5d1-4e72-b31d-51f5c31270d7 # Status
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6e781e88-bca3-4610-8c8c-b9903f61cc06
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 0c47c30d-cd86-41fe-90e0-854ac118527d
+        userCondition: null
+handle: tabItem
+hasTitleField: true
+icon: shapes
+name: 'Tab item'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

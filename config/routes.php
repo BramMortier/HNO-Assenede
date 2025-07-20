@@ -2,9 +2,14 @@
 
 return [
     // =======================
+    // AUTH ROUTES
+    // =======================
+    "/auth/login" => ["template" => "_auth/pages/login"],
+
+    // =======================
     // APP ROUTES
     // =======================
-    "/" => ["template" => "_app/pages/index"],
+    "/" => ["template" => "_app/pages/competitions/index"],
 
     // =======================
     // ADMIN ROUTES

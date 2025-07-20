@@ -1,0 +1,72 @@
+color: orange
+fieldLayouts:
+  5c7eeeae-6845-4dfe-9bd9-5e7c6166bac8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-07-20T18:34:02+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e9bc68fa-b02e-43ce-8622-1b9c65f99cd2 # Gebruiker
+            handle: playerField
+            includeInCards: false
+            instructions: null
+            label: Speler
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c7097c49-907f-47d7-bdc4-11684d872b2c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-06-24T21:46:33+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 1444bf84-89e3-452c-8f5a-1492ee3c8388 # Wedstrijd
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57323709-76ab-4bc9-aad9-dff252f87bb4
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-06-24T21:49:58+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c608c81f-628e-4a6a-8be6-085132bfd8f8 # Beschikbaarheid
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d23778f-7dca-4ad0-9047-01222f0a7328
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: f3f7f23d-05d4-4f62-8db8-f222779bcf81
+        userCondition: null
+handle: availability
+hasTitleField: false
+icon: calendar
+name: Beschikbaarheid
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{userField.one.fullName} is {availabilityField.label} voor {competitionField.one.homeTeamField.one.title} tegen {competitionField.one.awayTeamField.one.title} op {competitionField.one.dateField|date("d F Y")}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

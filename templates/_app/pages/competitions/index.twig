@@ -1,0 +1,25 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% extends "_app/base/layout" %}
+{% requireLogin %}
+
+{% set class = "competitions-page" %}
+
+{% set competitions = craft.entries
+    .section("competitions")
+    .relatedTo(currentUser.teamsField)
+    .all|default("") %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% block content %}
+    <section class="competitions-page container {{ class }}">
+        <div class="competitions-page-content">
+            {% include "_app/components/competitions/upcommingCompetition" %}
+
+            {% include "_app/components/competitions/list" with { competitions } only %}
+        </div>
+    </section>
+{% endblock %}

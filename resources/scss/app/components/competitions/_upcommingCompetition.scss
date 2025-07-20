@@ -1,0 +1,63 @@
+@use "../../../common/base/breakpoints" as *;
+
+.c-upcomming-competition {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-16);
+	padding: var(--space-24);
+	border-radius: var(--border-radius-10);
+	background-color: var(--clr-blue-800);
+
+	.c-title,
+	.c-text {
+		color: var(--clr-white);
+	}
+
+	&-top {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-4);
+	}
+
+	&-matchup {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		border: 1px solid var(--clr-blue-500);
+		background-color: var(--clr-blue-700);
+		border-radius: var(--border-radius-5);
+	}
+
+	&-team {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-6);
+		padding: var(--space-12) var(--space-24);
+
+		& > .typo-body-md {
+			color: var(--clr-orange-500);
+		}
+
+		&:first-child {
+			border-right: 1px solid var(--clr-blue-500);
+		}
+	}
+
+	&-extra {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--space-32);
+
+		& > button {
+			height: 40px;
+			border-radius: var(--border-radius-5);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-inline: var(--space-24);
+			cursor: pointer;
+			color: var(--clr-white);
+			background-color: var(--clr-orange-500);
+		}
+	}
+}

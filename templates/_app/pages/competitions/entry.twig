@@ -1,0 +1,30 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% extends "_app/base/layout" %}
+
+{% set class = "competitions-page" %}
+
+{% set homeTeam = entry.homeTeamField.one.title|default("") %}
+{% set awayTeam = entry.awayTeamField.one.title|default("") %}
+{% set availabilitiesDeadline = entry.availabilitiesDeadlineField|default("") %}
+{% set availablePlayers = entry.availablePlayersField.all|default("") %}
+{% set date = entry.dateField|default("") %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% block content %}
+    <section class="competition-page container {{ class }}">
+        <div class="competition-page-content">
+            <h4 class="c-title typo-body-md">{{ homeTeam }} {{ awayTeam }}</h4>
+            <p class="c-text typo-body-sm">{{ date|date("d F Y") }}</p>
+
+            <p class="c-text typo-body-sm">
+                Beschikbaarheden invullen ten laatste {{ availabilitiesDeadline|date("d F Y") }}
+            </p>
+
+            <p class="c-text typo-body-sm">{{ availablePlayers|length }} spelers beschikbaar</p>
+        </div>
+    </section>
+{% endblock %}

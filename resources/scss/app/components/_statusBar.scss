@@ -1,0 +1,9 @@
+@use "../../common/base/breakpoints" as *;
+
+.c-status-bar {
+	height: 64px;
+	align-items: center;
+
+	&-content {
+	}
+}

@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: teamsField
+instructions: null
+name: Ploegen
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Voeg een ploeg toe'
+  showCardsInGrid: false
+  showSiteMenu: true
+  showUnpermittedEntries: false
+  showUnpermittedSections: false
+  sources:
+    - 'section:f56554ce-0761-4494-b718-a62a70acc833' # Ploegen
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

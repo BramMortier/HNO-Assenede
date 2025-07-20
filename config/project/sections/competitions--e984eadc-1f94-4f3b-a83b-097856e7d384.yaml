@@ -1,17 +1,17 @@
-defaultPlacement: beginning
+defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: d7e8d0bc-8052-499d-99b8-d622687dfee7 # Page
-handle: pages
+    uid: 82998132-6d0e-46f2-b2c5-44d619da765c # Wedstrijd
+handle: competitions
 maxAuthors: 1
-name: "Extra Pagina's"
+name: Wedstrijden
 previewTargets:
   -
     __assoc__:
       -
         - label
-        - 'Primary entry page'
+        - 'Primaire invoer-pagina'
       -
         - urlFormat
         - '{url}'
@@ -23,9 +23,9 @@ siteSettings:
   e1acd264-0533-4dd7-8cfa-183423e1c25e: # nl
     enabledByDefault: true
     hasUrls: true
-    template: _pages/entry.twig
-    uriFormat: '{slug}'
+    template: _app/pages/competitions/entry.twig
+    uriFormat: 'wedstrijden/{slug}'
 structure:
-  maxLevels: 3
-  uid: 7ddf6c3b-101c-4f71-8d66-e6b989227b38
+  maxLevels: 1
+  uid: 972f4a1c-8b08-4df6-a9a7-35608e924832
 type: structure

@@ -1,0 +1,22 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<form 
+    method="post" 
+    id="login-form"
+    class="c-auth-login-form {{ class }}" 
+    x-data="loginForm"
+    @submit.prevent="login($event)"
+>
+    <div class="c-auth-login-form-main">
+        <div class="c-auth-login-form-fields">
+            {{ csrfInput() }}
+        </div>
+    </div>
+</form>

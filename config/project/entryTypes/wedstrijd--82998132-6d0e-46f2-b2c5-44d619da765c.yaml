@@ -1,0 +1,136 @@
+color: orange
+fieldLayouts:
+  b1b15dfd-a9c8-4e3a-9b95-00110664d897:
+    cardView:
+      - 'layoutElement:f65451fa-8ad5-4d38-844d-9f105cf1424c'
+      - 'layoutElement:63735fa9-be25-4f14-8be4-0ad5483a35a8'
+      - 'layoutElement:ff836b08-6a40-462f-9460-ee35e600bf9e'
+      - 'layoutElement:1d8fae3a-1965-4c6e-9eb5-774f8d02b8c4'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-06-24T20:23:05+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: 'Wedstrijd code'
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5acfa747-cf22-444d-84ac-dfdec65968db
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-19T12:36:08+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: b15e1a46-a05d-4ef5-b578-82fabaefb528
+            userCondition: null
+          -
+            dateAdded: '2025-07-19T12:35:39+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 75b5f5fa-6940-4cfc-8b5d-b74988471736 # Ploeg
+            handle: homeTeamField
+            includeInCards: true
+            instructions: null
+            label: Thuis
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d8fae3a-1965-4c6e-9eb5-774f8d02b8c4
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-07-19T12:35:39+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 75b5f5fa-6940-4cfc-8b5d-b74988471736 # Ploeg
+            handle: awayTeamField
+            includeInCards: true
+            instructions: null
+            label: Bezoekers
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff836b08-6a40-462f-9460-ee35e600bf9e
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-07-19T12:36:08+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: bbc34f57-9e1c-4a18-a9ca-b555d67a582e
+            userCondition: null
+          -
+            dateAdded: '2025-06-24T20:27:46+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: f9798596-5043-488d-a45b-962204e21626 # Datum
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f65451fa-8ad5-4d38-844d-9f105cf1424c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-06-24T21:50:54+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: f9798596-5043-488d-a45b-962204e21626 # Datum
+            handle: availabilitiesDeadlineField
+            includeInCards: true
+            instructions: null
+            label: 'Beschikbaarheden deadline'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 63735fa9-be25-4f14-8be4-0ad5483a35a8
+            userCondition: null
+            warning: null
+            width: 50
+        name: Inhoud
+        uid: 54d92b84-49fe-44c2-a63d-9ceabc649b1e
+        userCondition: null
+handle: wedstrijd
+hasTitleField: true
+icon: table-tennis-paddle-ball
+name: Wedstrijd
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

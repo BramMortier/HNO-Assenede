@@ -1,0 +1,31 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 90058012-6139-471d-bd26-a3d8c56b1afc # Ploeg
+handle: teams
+maxAuthors: 1
+name: Ploegen
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  e1acd264-0533-4dd7-8cfa-183423e1c25e: # nl
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: a2e4f2bc-b02b-4f64-a921-e1cd50e09aa8
+type: structure

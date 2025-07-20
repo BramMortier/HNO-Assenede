@@ -1,0 +1,51 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{% set href = href|default("") %}
+{% set homeTeam = homeTeam|default("") %}
+{% set awayTeam = awayTeam|default("") %}
+{% set date = date|default("") %}
+{% set availabilityDeadline = availabilityDeadline|default("") %}
+
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<a href="{{ href }}">
+    <article class="c-competition-card {{ class }}" {{ attr(attributes) }}>
+        <p class="typo-body-md semibold">{{ date|date("d F Y") }} {{ "om" }} {{ date|date("h:i") }}</p>
+
+        <div class="c-competition-card-matchup">
+            <div class="c-competition-card-team">
+                <p class="typo-body-md semibold">{{ "Thuis"|t }}</p>
+                <p class="typo-body-lg">{{ homeTeam }}</p>
+            </div>
+
+            <div class="c-competition-card-team">
+                <p class="typo-body-md semibold">{{ "Bezoekers"|t }}</p>
+                <p class="typo-body-lg">{{ awayTeam }}</p>
+            </div>
+        </div>
+
+        <div class="c-competition-card-availability">
+            <div class="c-competition-card-availability-top">
+                <p class="typo-body-md">{{ "Beschikbaarheid"|t }}</p>
+
+                <div class="c-competition-card-availability-deadline">
+                    {% include "_common/components/icon" with { icon: "exclamation-circle" } only %}
+
+                    <p class="typo-body-md">{{ "Ten laatste invullen tegen"|t }} {{ availabilityDeadline|date("d F Y") }}</p>
+                </div>
+            </div>
+
+            <div class="c-competition-card-availability-main">
+                <button class="typo-body-md">{{ "Beschikbaar"|t }}</button>
+                <button class="typo-body-md">{{ "Niet beschikbaar"|t }}</button>
+                <button class="typo-body-md">{{ "Reserve"|t }}</button>
+            </div>
+        </div>
+    </article>
+</a>

@@ -1,0 +1,51 @@
+color: orange
+fieldLayouts:
+  57c8cf99-89ba-4f93-8440-41ff54cf9bae:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-06-24T20:27:21+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5a418841-6f93-43c4-9c5a-19bd05b1cbd6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 7ccb44d0-8e66-4ddf-b380-a9496797f72d
+        userCondition: null
+handle: team
+hasTitleField: true
+icon: user-group
+name: Ploeg
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

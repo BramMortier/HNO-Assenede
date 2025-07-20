@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: availablePlayersField
+instructions: null
+name: 'Aanwezige spelers'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Voeg een speler toe'
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Users

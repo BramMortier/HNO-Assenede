@@ -1,0 +1,33 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{% set competitions = competitions|default("") %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% if competitions|length %}
+    <ul class="c-competitions-list {{ class }}" {{ attr(attributes) }}>
+        {% for competition in competitions %}
+            {% set href = competition.url|default("") %}
+            {% set homeTeam = competition.homeTeamField.one.title|default("") %}
+            {% set awayTeam = competition.awayTeamField.one.title|default("") %}
+            {% set availabilitiesDeadline = competition.availabilitiesDeadlineField|default("") %}
+            {% set availablePlayers = competition.availablePlayersField.all|default("") %}
+            {% set date = competition.dateField|default("") %}
+
+            <li class="c-competitions-list-item">
+                {% include "_app/components/competitions/card" with {
+                    href,
+                    date,
+                    homeTeam,
+                    awayTeam,
+                    availabilitiesDeadline
+                } only %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

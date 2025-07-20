@@ -1,0 +1,55 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{% set upcommingCompetition = craft.entries
+    .section("competitions")
+    .relatedTo(currentUser.teamsField)
+    .orderBy("dateField ASC")
+    .one|default([]) %}
+
+{% set homeTeam = upcommingCompetition.homeTeamField.one.title|default("") %}
+{% set awayTeam = upcommingCompetition.awayTeamField.one.title|default("") %}
+{% set date = upcommingCompetition.dateField|default("") %}
+{% set availability = null %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<div class="c-upcomming-competition {{ class }}" {{ attr(attributes) }}>
+    <div class="c-upcomming-competition-top">
+        <h3 class="c-title typo-h4">{{ "Volgende wedstrijd"|t }}</h3>
+        <p class="c-text typo-body-md">{{ date|date("d F Y") }} {{ "om" }} {{ date|date("h:i") }}</p>
+    </div>
+
+    <div class="c-upcomming-competition-matchup">
+        <div class="c-upcomming-competition-team">
+            <p class="c-text typo-body-md semibold">{{ "Thuis"|t }}</p>
+            <p class="c-text typo-body-lg">{{ homeTeam }}</p>
+        </div>
+
+        <div class="c-upcomming-competition-team">
+            <p class="c-text typo-body-md semibold">{{ "Bezoekers"|t }}</p>
+            <p class="c-text typo-body-lg">{{ awayTeam }}</p>
+        </div>
+    </div>
+
+    <div class="c-upcomming-competition-extra">
+        <p class="c-text typo-body-md">
+            {{ "Beschikbaarheid:"|t }}
+
+            {% if availability %}
+                {# Deze moeten we afleiden uit de availabilites table later #}
+                {{ "Jouw beschikbaarheid"|t }}
+            {% else %}
+                <span class="semibold">{{ "Nog niet ingevuld"|t }}</span>
+            {% endif %}
+        </p>
+
+        <button class="typo-body-md semibold">
+            {{ "Meer info"|t }}
+        </button>
+    </div>
+</div>

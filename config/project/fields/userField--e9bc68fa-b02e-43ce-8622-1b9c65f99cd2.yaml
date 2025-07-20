@@ -1,0 +1,23 @@
+columnSuffix: null
+handle: userField
+instructions: null
+name: Gebruiker
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'group:1b93750d-92a9-4239-9f18-ca76b180e0a6' # Spelers
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Users

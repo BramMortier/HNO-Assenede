@@ -1,9 +1,9 @@
 import Alpine from "alpinejs";
 
-import { site } from "../components";
+import * as components from "../components";
 
 window.Alpine = Alpine;
 
-Alpine.data("site", site);
+Alpine.data("loginForm", components.loginForm);
 
 Alpine.start();

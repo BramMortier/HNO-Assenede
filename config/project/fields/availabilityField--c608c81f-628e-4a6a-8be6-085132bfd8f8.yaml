@@ -1,0 +1,82 @@
+columnSuffix: null
+handle: availabilityField
+instructions: null
+name: Beschikbaarheid
+searchable: false
+settings:
+  customOptions: false
+  iconsOnly: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Niet beschikbaar'
+        -
+          - value
+          - unavailable
+        -
+          - icon
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Beschikbaar
+        -
+          - value
+          - available
+        -
+          - icon
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Reserve
+        -
+          - value
+          - reserve
+        -
+          - icon
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Speelt
+        -
+          - value
+          - approved
+        -
+          - icon
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Speelt niet'
+        -
+          - value
+          - unapproved
+        -
+          - icon
+          - ''
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\ButtonGroup

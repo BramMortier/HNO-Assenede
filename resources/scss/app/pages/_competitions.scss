@@ -1,0 +1,9 @@
+@use "../../common/base/breakpoints" as *;
+
+.competitions-page {
+	&-content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-32);
+	}
+}
