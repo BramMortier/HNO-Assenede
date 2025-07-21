@@ -12,7 +12,7 @@
 
 {% include "_admin/base/head" %}
 
-<body x-data="site" class="admin-page {{ class }}" {{ attr(attributes) }}>
+<body class="admin-page {{ class }}" {{ attr(attributes) }}>
     <main class="admin-page-main">
         {% block content %}{% endblock %}
     </main>

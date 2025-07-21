@@ -15,6 +15,7 @@ use yii\base\Module;
 use yii\base\InvalidConfigException;
 
 use modules\site\assets\LoginStyles;
+use modules\site\web\twig\SiteTwigExtension;
 
 class Site extends Module {
     public function init() {
@@ -22,12 +23,13 @@ class Site extends Module {
 
         parent::init();
 
-        if (Craft::$app->getRequest()->getIsConsoleRequest()) {
-            $this->controllerNamespace = 'modules\\console\\controllers';
-        } else {
-            $this->controllerNamespace = 'modules\\controllers';
-        }
+        $this->controllerNamespace = 'modules\\controllers';
 
+        $this->_registerTwigExtensions();
+        $this->_registerEventHandlers();
+    }
+
+    private function _registerEventHandlers(): void {
         if (Craft::$app->getRequest()->getIsCpRequest()) {
             Event::on(View::class, View::EVENT_BEFORE_RENDER_TEMPLATE, function (TemplateEvent $event) {
                 try {
@@ -51,5 +53,9 @@ class Site extends Module {
                 });
             });
         }
+    }
+
+    private function _registerTwigExtensions(): void {
+        Craft::$app->view->registerTwigExtension(new SiteTwigExtension());
     }
 }

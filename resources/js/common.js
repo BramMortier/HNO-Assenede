@@ -1,1 +1,1 @@
-console.log("common js loaded");
+import "./common/plugins/alpine";

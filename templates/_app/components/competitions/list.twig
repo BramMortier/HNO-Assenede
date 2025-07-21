@@ -9,6 +9,10 @@
 {# ======================= #}
 {# TEMPLATE                #}
 {# ======================= #}
+{% include "_app/components/competitions/seasonOverview" %}
+
+{% include "_app/components/competitions/dateControls" %}
+
 {% if competitions|length %}
     <ul class="c-competitions-list {{ class }}" {{ attr(attributes) }}>
         {% for competition in competitions %}

@@ -15,11 +15,13 @@
 {# TEMPLATE                #}
 {# ======================= #}
 {% block content %}
-    <section class="competitions-page container {{ class }}">
+    <section x-data="competitions" class="competitions-page container {{ class }}">
         <div class="competitions-page-content">
             {% include "_app/components/competitions/upcommingCompetition" %}
 
-            {% include "_app/components/competitions/list" with { competitions } only %}
+            <div id="competition-results" class="competitions-page-main">
+                {# Loaded via JS request #}
+            </div>
         </div>
     </section>
 {% endblock %}

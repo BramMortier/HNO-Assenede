@@ -1,0 +1,23 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<div class="c-date-controls {{ class }}" {{ attr(attributes) }}>
+    <button @click="renderPreviousMonth">
+        {% include "_common/components/icon" with { icon: "fat-arrow-left" } only %}
+    </button>
+
+    <div class="c-date-controls-selected">
+        <p id="competitions-date-range-season" class="typo-body-md">{# Loaded via JS request #}</p>
+        <p id="competitions-date-range-label" class="typo-h4">{# Loaded via JS request #}</p>
+    </div>
+
+    <button @click="renderNextMonth">
+        {% include "_common/components/icon" with { icon: "fat-arrow-right" } only %}
+    </button>
+</div>

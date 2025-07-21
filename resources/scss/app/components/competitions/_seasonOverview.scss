@@ -1,0 +1,24 @@
+@use "../../../common/base/breakpoints" as *;
+
+.c-season-overview {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-12);
+
+	&-graph {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		align-items: flex-end;
+		gap: var(--space-4);
+		height: 80px;
+
+		&-bar {
+			border-radius: var(--border-radius-5);
+			background-color: var(--clr-grey-100);
+
+			&.selected {
+				background-color: var(--clr-orange-500);
+			}
+		}
+	}
+}

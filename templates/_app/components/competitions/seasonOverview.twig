@@ -1,0 +1,28 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{% set seasonOverview = seasonOverview|default([]) %}
+{% set mostCompetitionsMonth = max(seasonOverview) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<div class="c-season-overview {{ class }}" {{ attr(attributes) }}>
+    <p class="typo-body-md">{{ "Seizoensoverzicht"|t }}</p>
+
+    <div class="c-season-overview-graph">
+        {% for month, competitionsCount in seasonOverview %}
+            {% set graphBarHeight = mostCompetitionsMonth > 0 
+                ? max((competitionsCount / mostCompetitionsMonth) * 100, 10) : 10 %}
+
+            <div 
+                style="height: {{ graphBarHeight }}%" 
+                class="c-season-overview-graph-bar"
+                :class="{ 'selected': monthLabel == `{{ month }}` }">
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,60 @@
+{# ======================= #}
+{# PARAMS                  #}
+{# ======================= #}
+{% set seasonParam = craft.app.request.getQueryParam("season") %}
+{% set startDateParam = craft.app.request.getQueryParam("start-date") %}
+{% set endDateParam = craft.app.request.getQueryParam("end-date") %}
+
+{# ======================= #}
+{# QUERY LOGIC             #}
+{# ======================= #}
+{% set allCompetitionsQuery = craft.entries
+    .section("competitions")
+    .relatedTo(currentUser.teamsField) %}
+
+{% set filteredCompetitionsQuery = clone(allCompetitionsQuery) %}
+
+{# DATES #}
+{% if startDateParam is not null and endDateParam is not null %}
+    {% set filteredCompetitionsQuery = filteredCompetitionsQuery
+        .dateField("and, >= " ~ startDateParam ~ ", <= " ~ endDateParam) %}
+{% endif %}
+
+{% set seasonCompetitionsQuery = clone(allCompetitionsQuery) %}
+
+{# SEASON OVERVIEW #}
+{% if seasonParam is not null %}
+    {% set seasonCompetitionsQuery = seasonCompetitionsQuery
+          .andWhere("YEAR([[dateField]]) = :y", { y: seasonParam }).all %}
+
+    {% set months = [] %}
+
+    {% for competition in seasonCompetitionsQuery %}
+        {% set months = months|push(competition.dateField|date("F")) %}
+    {% endfor %}
+
+    {% set allMonths = {
+        'januari': 0,
+        'februari': 0,
+        'maart': 0,
+        'april': 0,
+        'mei': 0,
+        'juni': 0,
+        'juli': 0,
+        'augustus': 0,
+        'september': 0,
+        'oktober': 0,
+        'november': 0,
+        'december': 0
+    } %}
+
+    {% set seasonOverview = arrayCountValues(months) %}
+    {% set seasonOverview = allMonths | merge(seasonOverview) %}
+{% endif %}
+
+{% set competitions = filteredCompetitionsQuery.all %}
+
+{# ======================= #}
+{# TEMPLATE.               #}
+{# ======================= #}
+{% include "_app/components/competitions/list" with { competitions, seasonOverview } only %}

@@ -10,6 +10,7 @@
     .orderBy("dateField ASC")
     .one|default([]) %}
 
+{% set href = upcommingCompetition.url|default("") %}
 {% set homeTeam = upcommingCompetition.homeTeamField.one.title|default("") %}
 {% set awayTeam = upcommingCompetition.awayTeamField.one.title|default("") %}
 {% set date = upcommingCompetition.dateField|default("") %}
@@ -48,8 +49,8 @@
             {% endif %}
         </p>
 
-        <button class="typo-body-md semibold">
+        <a href="{{ href }}" class="typo-body-md semibold nowrap">
             {{ "Meer info"|t }}
-        </button>
+        </a>
     </div>
 </div>

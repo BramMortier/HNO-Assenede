@@ -14,6 +14,10 @@ html {
 	scroll-padding-top: var(--space-64);
 }
 
+*::-webkit-scrollbar {
+	display: none;
+}
+
 button,
 input,
 textarea,

@@ -4,7 +4,7 @@ return [
     // =======================
     // AUTH ROUTES
     // =======================
-    "/auth/login" => ["template" => "_auth/pages/login"],
+    // "/auth/login" => ["template" => "_auth/pages/login"],
 
     // =======================
     // APP ROUTES

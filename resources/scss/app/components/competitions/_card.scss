@@ -48,7 +48,7 @@
 			color: var(--clr-error);
 		}
 
-		&-main {
+		&-actions {
 			display: flex;
 			flex-wrap: wrap;
 			gap: var(--space-8);
@@ -62,6 +62,24 @@
 				justify-content: center;
 				padding-inline: var(--space-24);
 				cursor: pointer;
+			}
+		}
+
+		&-main {
+			display: flex;
+			justify-content: space-between;
+			gap: var(--space-32);
+
+			& > a {
+				height: 40px;
+				border-radius: var(--border-radius-5);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding-inline: var(--space-24);
+				cursor: pointer;
+				color: var(--clr-white);
+				background-color: var(--clr-orange-500);
 			}
 		}
 	}
