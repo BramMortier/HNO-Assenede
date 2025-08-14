@@ -10,6 +10,8 @@ return [
     // APP ROUTES
     // =======================
     "/" => ["template" => "_app/pages/competitions/index"],
+    "/drinks" => ["template" => "_app/pages/drinks/index"],
+
 
     // =======================
     // ADMIN ROUTES

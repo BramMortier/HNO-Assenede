@@ -4,7 +4,9 @@ use craft\helpers\App;
 
 $host = Craft::$app->getRequest()->getIsConsoleRequest()
     ? App::env('PRIMARY_SITE_URL')
-    : Craft::$app->getRequest()->getHostInfo();
+    : Craft::$app->getRequest()->getHostInfo(); 
+
+
 
 return [
     'useDevServer' => App::env("CRAFT_DEV_MODE"),

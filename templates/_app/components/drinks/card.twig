@@ -1,0 +1,28 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+
+{% set title = title|default("Drink Name") %}
+{% set price = price|default("€0.00") %}
+{% set image = Thumbnail|default(null) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<article class="drink-card {{ class }}" {{ attr(attributes) }}>
+    <div class="drink-card__image">
+        {% if image %}
+            <img src="{{ image.url }}" alt="{{ title }}">
+        {% else %}
+            <div class="drink-card__image--placeholder"></div>
+        {% endif %}
+    </div>
+
+    <div class="drink-card__content">
+        <h3 class="drink-card__title">{{ title }}</h3>
+        <div class="drink-card__footer">
+            <span class="drink-card__price">{{ price }}</span>
+            <a href="/drinks/{{ title|kebab }}" class="drink-card__cta">Bestel</a>
+        </div>
+    </div>
+</article>

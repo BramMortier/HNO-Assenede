@@ -1,0 +1,20 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set drinks = drinks|default([]) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<div class="drinks-list {{ class }}">
+    {% for drink in drinks %}
+        {% include "_app/components/drinks/card" with {
+            title: drink.title,
+            price: drink.priceField ?? "",
+            image: drink.imageField.one ?? null
+        } %}
+    {% else %}
+        <p class="drinks-list__empty">Geen dranken gevonden.</p>
+    {% endfor %}
+</div>
