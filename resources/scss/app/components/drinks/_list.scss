@@ -7,7 +7,7 @@
 
     // 4 columns from tablet size and up
     @include styles-above("tablet") {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     &__empty {

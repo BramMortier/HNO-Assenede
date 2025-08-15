@@ -14,7 +14,7 @@
 {# TEMPLATE                #}
 {# ======================= #}
 {% block content %}
-  <section class="drinks-page container {{ class }}">
+  <section x-data="drinks" class="drinks-page container {{ class }}">
     <div class="drinks-page-content">
       <div id="drinks-results">
         {% include "_app/components/drinks/list" with {

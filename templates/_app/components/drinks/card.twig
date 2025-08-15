@@ -3,8 +3,8 @@
 {# ======================= #}
 
 {% set title = title|default("Drink Name") %}
-{% set price = price|default("€0.00") %}
-{% set image = Thumbnail|default(null) %}
+{% set price = price|money|default("€0.00") %}
+{% set image = image|default(null) %}
 
 {# ======================= #}
 {# TEMPLATE                #}
@@ -19,10 +19,10 @@
     </div>
 
     <div class="drink-card__content">
-        <h3 class="drink-card__title">{{ title }}</h3>
+        <h3 class="drink-card__title typo-body-sm">{{ title }}</h3>
         <div class="drink-card__footer">
-            <span class="drink-card__price">{{ price }}</span>
-            <a href="/drinks/{{ title|kebab }}" class="drink-card__cta">Bestel</a>
+            <span class="drink-card__price typo-body-md">{{ price }}</span>
+            <button @click="addDrinkToTab" class="drink-card__cta">Bestel</button>
         </div>
     </div>
 </article>
