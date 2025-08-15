@@ -9,6 +9,9 @@
 {# ======================= #}
 <header class="c-status-bar container {{ class }}" {{ attr(attributes) }}>
     <div class="c-status-bar-content">
-        <p class="typo-body-lg">{{ currentUser.fullName }}</p>    
+        <p class="typo-body-lg">Hallo, {{ currentUser.firstName }}</p>
+        <a href="/settings" class="c-status-bar-settings-btn">
+            {% include "_common/components/icon" with { icon: "settings" } only %}
+        </a>
     </div>
 </header>

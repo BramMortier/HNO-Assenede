@@ -1,0 +1,21 @@
+@use "../../../common/base/breakpoints" as *;
+
+.drinks-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // default: 2 columns for smartphones
+    gap: var(--space-24);
+
+    // 4 columns from tablet size and up
+    @include styles-above("tablet") {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__empty {
+        grid-column: 1 / -1;
+        text-align: center;
+        color: var(--clr-grey-300);
+        font-size: var(--fs-16);
+        font-weight: var(--fw-500);
+        padding: var(--space-16) 0;
+    }
+}

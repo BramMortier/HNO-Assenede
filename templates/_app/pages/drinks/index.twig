@@ -1,0 +1,26 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% extends "_app/base/layout" %}
+{% requireLogin %}
+
+{% set class = "drinks-page" %}
+
+{% set drinks = craft.entries
+    .section("drinks")
+    .all|default("") %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+{% block content %}
+  <section class="drinks-page container {{ class }}">
+    <div class="drinks-page-content">
+      <div id="drinks-results">
+        {% include "_app/components/drinks/list" with {
+          drinks: drinks
+        } %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

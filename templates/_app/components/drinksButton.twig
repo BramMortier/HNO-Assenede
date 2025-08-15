@@ -1,0 +1,14 @@
+{# ======================= #}
+{# PROPERTIES              #}
+{# ======================= #}
+{% set class = class|default("") %}
+{% set attributes = attributes|default({}) %}
+
+{# ======================= #}
+{# TEMPLATE                #}
+{# ======================= #}
+<a href="{{ url('/drinks') }}" class="c-drinks-button {{ class }}" {{ attr(attributes) }}>
+    <span class="c-drinks-button-icon">
+        {% include "_common/components/icon" with { icon: "drinks" } only %}
+    </span>
+</a>
