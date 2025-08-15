@@ -28,6 +28,7 @@
 		"mmikkel/cp-field-inspect": "2.0.4",
 		"nystudio107/craft-vite": "5.0.1",
 		"studioespresso/craft-mollie-payments": "5.2.4",
+		"verbb/many-to-many": "4.0.2",
 		"vlucas/phpdotenv": "^5.4.0"
 	},
 	"require-dev": {

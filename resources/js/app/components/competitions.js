@@ -57,5 +57,7 @@ export function competitions() {
 				endDate: format(end, "yyyy-MM-dd"),
 			};
 		},
+
+		setAvailability(status) {},
 	};
 }

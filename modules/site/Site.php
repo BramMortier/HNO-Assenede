@@ -15,6 +15,7 @@ use yii\base\Module;
 use yii\base\InvalidConfigException;
 
 use modules\site\assets\LoginStyles;
+use modules\site\services\AvailabilitiesService;
 use modules\site\web\twig\SiteTwigExtension;
 
 class Site extends Module {
@@ -23,10 +24,14 @@ class Site extends Module {
 
         parent::init();
 
-        $this->controllerNamespace = 'modules\\controllers';
+        $this->controllerNamespace = 'modules\\site\\controllers';
 
         $this->_registerTwigExtensions();
         $this->_registerEventHandlers();
+
+        $this->setComponents([
+            "availabilities" => AvailabilitiesService::class,
+        ]);
     }
 
     private function _registerEventHandlers(): void {

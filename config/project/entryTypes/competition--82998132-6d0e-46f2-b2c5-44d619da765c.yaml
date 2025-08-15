@@ -123,7 +123,7 @@ fieldLayouts:
         name: Inhoud
         uid: 54d92b84-49fe-44c2-a63d-9ceabc649b1e
         userCondition: null
-handle: wedstrijd
+handle: competition
 hasTitleField: true
 icon: table-tennis-paddle-ball
 name: Wedstrijd

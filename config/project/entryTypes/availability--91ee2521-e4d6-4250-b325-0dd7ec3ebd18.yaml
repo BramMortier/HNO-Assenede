@@ -67,6 +67,6 @@ showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{userField.one.fullName} is {availabilityField.label} voor {competitionField.one.homeTeamField.one.title} tegen {competitionField.one.awayTeamField.one.title} op {competitionField.one.dateField|date("d F Y")}'
+titleFormat: '{playerField.one.fullName} is {availabilityField.label} voor {competitionField.one.homeTeamField.one.title} tegen {competitionField.one.awayTeamField.one.title} op {competitionField.one.dateField|date("d F Y")}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

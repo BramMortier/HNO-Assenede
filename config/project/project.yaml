@@ -1,4 +1,4 @@
-dateModified: 1753037028
+dateModified: 1753542753
 elementSources:
   craft\elements\Asset:
     -
@@ -294,6 +294,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 5.1.1
+  manytomany:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.1
   mollie-payments:
     edition: standard
     enabled: true
